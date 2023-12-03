@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f26ed9bd016734de3889c1cab6a1279d, type: 3}
-  m_Name: RustyCopperArmor
+  m_Name: ironArmor
   m_EditorClassIdentifier: 
-  itemImage: {fileID: -625888372, guid: 9bba66e508be24d2eb0886a5d7a89779, type: 3}
-  itemName: Rusty Copper Armor
-  itemPrice: 5
-  armorStats:
-  - statName: Defense
-    statValue: 2
-  - statName: Tetanus
-    statValue: 1
-  description: i just found this armor laying around at my grandpa's basement, you
-    can have it cheap, but i do not offer guarantee
+  itemImage: {fileID: 208713569, guid: fd65eb74c485f4bf59e81e070036422d, type: 3}
+  itemName: iron Armor
+  BuyPrice: 15
+  SellPrice: 7
+  description: Fashion meets fortress! Perfect for knights who love a good clink
+    and don't mind a squeak. Step in and clank your way to glory!
   canOnlyContainOne: 1
+  modifierStats:
+  - statName: Defense
+    statValue: 6
+    effectTime: 0

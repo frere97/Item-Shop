@@ -1,19 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
-using System;
 
-[CreateAssetMenu(fileName = "new armor", menuName = "Armor")]
-public class ArmorItem : ScriptableObject
+public class Item : ScriptableObject
 {
-
     [SerializeField] Sprite itemImage;
     [SerializeField] string itemName;
-    [SerializeField] int itemPrice;
-    [SerializeField] List<ArmorStats> armorStats = new List<ArmorStats>();
+    [SerializeField] int BuyPrice;
+    [SerializeField] int SellPrice;
     [TextArea][SerializeField] string description;
     [Tooltip("if enabled, the system will check if player already have in the inventory. If True: will lock the buy")]
     [SerializeField] bool canOnlyContainOne;
+    [SerializeField] List<ModifierStats> modifierStats = new List<ModifierStats>();
 
     //made this way because it is easier to control than variables getter setter
     public Sprite GetItemImage()
@@ -25,14 +26,20 @@ public class ArmorItem : ScriptableObject
     {
         return itemName;
     }
-    public int GetItemPrice()
+
+    public List<ModifierStats> GetItemtats()
     {
-        return itemPrice;
+        return modifierStats;
     }
 
-    public List<ArmorStats> GetArmorStats()
+    public int GetItemBuyPrice()
     {
-        return armorStats;
+        return BuyPrice;
+    }
+
+    public int GetItemSelPrice()
+    {
+        return SellPrice;
     }
 
     public string GetDescription()
@@ -44,11 +51,14 @@ public class ArmorItem : ScriptableObject
     {
         return canOnlyContainOne;
     }
+
 }
 
 [Serializable]
-public class ArmorStats
+public class ModifierStats
 {
-   public string statName;
-   public int statValue;
+    public string statName;
+    public int statValue;
+    [Tooltip ("Leave 0 empty if not apply")]
+    public float effectTime = 0;
 }

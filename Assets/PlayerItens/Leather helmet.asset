@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cb711d19f1d450fbbf85db7000e8a9, type: 3}
+  m_Name: Leather helmet
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: -489982062, guid: 1cdfd30daa9cb449c86c91ca352016aa, type: 3}
+  itemName: Leather helmet
+  BuyPrice: 3
+  SellPrice: 1
+  description: Feel secure in this leather helmet, where the appearance of protection
+    meets budget-friendly craftsmanship. We both know it's light on the wallet and
+    on actual defense!
+  canOnlyContainOne: 1
+  modifierStats:
+  - statName: Defense
+    statValue: 3
+    effectTime: 0
