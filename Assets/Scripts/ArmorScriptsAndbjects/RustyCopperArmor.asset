@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26ed9bd016734de3889c1cab6a1279d, type: 3}
+  m_Name: RustyCopperArmor
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: -625888372, guid: 9bba66e508be24d2eb0886a5d7a89779, type: 3}
+  itemName: Rusty Copper Armor
+  itemPrice: 5
+  armorStats:
+  - statName: Defense
+    statValue: 2
+  - statName: Tetanus
+    statValue: 1
+  description: i just found this armor laying around at my grandpa's basement, you
+    can have it cheap, but i do not offer guarantee
+  canOnlyContainOne: 1
