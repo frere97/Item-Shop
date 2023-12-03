@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     int gold = 13;
-    List<Item> PlayerItens = new List<Item>();
+    [SerializeField]List<Item> PlayerItens = new List<Item>();
+    private Item HeadGear;
+    private Item BodyGear;
 
 
     #region gold
@@ -42,19 +44,63 @@ public class PlayerInventory : MonoBehaviour
     #endregion
 
     #region transactions
-    public void BuyItem(Item item, int price)
+    public void BuyItem(Item item)
     {
         AddItemToInventory(item);
-        RemoveGold(price);
+        RemoveGold(item.GetItemBuyPrice());
     }
 
-    public void SellItem(Item item, int price)
+    public void SellItem(Item item)
     {
         RemoveItemFromInventory(item);
-        AddGold(price);
+        AddGold(item.GetItemSelPrice());
     }
 
 
     #endregion
 
+    #region Equipements
+    public void Equip(Item item)
+    {
+        if(item is EquipableItem)
+        {
+            if(((EquipableItem)item).type == Type.BodyGear)
+            {
+                BodyGear = item;
+            }
+            else
+            {
+                HeadGear = item;
+            }
+
+        }
+    }
+
+    public void Unequip(Item item)
+    {
+        if (item is EquipableItem)
+        {
+            if (((EquipableItem)item).type == Type.BodyGear)
+            {
+                BodyGear = null;
+            }
+            else
+            {
+                HeadGear = null;
+            }
+
+        }
+    }
+
+    public Item GetBodyGear()
+    {
+        return BodyGear;
+    }
+
+    public Item GetHeadGear()
+    {
+        return HeadGear;
+    }
+
+    #endregion
 }

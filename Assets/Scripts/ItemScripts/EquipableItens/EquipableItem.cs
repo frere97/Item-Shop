@@ -5,7 +5,17 @@ using UnityEngine;
 
 public class EquipableItem : Item
 {
-    
+    public Type type; 
+
 }
+
+public enum Type
+{
+    BodyGear,
+    HeadGear
+}
+
+
+
 
 

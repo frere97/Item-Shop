@@ -24,3 +24,4 @@ MonoBehaviour:
   - statName: Defense
     statValue: 3
     effectTime: 0
+  type: 1
