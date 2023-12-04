@@ -26,3 +26,5 @@ MonoBehaviour:
   - statName: Rust
     statValue: 1
     effectTime: 0
+  type: 0
+  Equipement: {fileID: 1775017642193818404, guid: 7d8a8f7c2ade94bf2849f8dcff32fca5, type: 3}

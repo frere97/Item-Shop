@@ -16,12 +16,15 @@ MonoBehaviour:
   itemName: Leather helmet
   BuyPrice: 3
   SellPrice: 1
-  description: Feel secure in this leather helmet, where the appearance of protection
-    meets budget-friendly craftsmanship. We both know it's light on the wallet and
+  description: 'Feel secure in this leather helmet, where the appearance of protection
+    meets budget-friendly craftsmanship. We both know it''s light on the wallet and
     on actual defense!
+
+    (animation not implemented)'
   canOnlyContainOne: 1
   modifierStats:
   - statName: Defense
     statValue: 3
     effectTime: 0
   type: 1
+  Equipement: {fileID: 0}

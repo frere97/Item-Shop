@@ -16,11 +16,14 @@ MonoBehaviour:
   itemName: Wizard Hat
   BuyPrice: 3
   SellPrice: 1
-  description: I don't know if it will actually help, but some would say, that looking
-    like a magician is the first step
+  description: 'I don''t know if it will actually help, but some would say, that
+    looking like a magician is the first step
+
+    (animation not implemented)'
   canOnlyContainOne: 1
   modifierStats:
   - statName: Magic
     statValue: 1
     effectTime: 0
   type: 1
+  Equipement: {fileID: 0}

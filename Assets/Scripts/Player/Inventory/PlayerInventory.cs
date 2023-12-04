@@ -86,6 +86,9 @@ public class PlayerInventory : MonoBehaviour
             if(((EquipableItem)item).type == Type.BodyGear)
             {
                 BodyGear = item;
+                
+                GameObject equipmentVisual = Instantiate(((EquipableItem)item).Equipement, LocalPlayer.instance.transform);
+                equipmentVisual.transform.localPosition = Vector3.zero;
             }
             else
             {

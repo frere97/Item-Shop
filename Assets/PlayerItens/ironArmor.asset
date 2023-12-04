@@ -16,10 +16,15 @@ MonoBehaviour:
   itemName: iron Armor
   BuyPrice: 15
   SellPrice: 7
-  description: Fashion meets fortress! Perfect for knights who love a good clink
-    and don't mind a squeak. Step in and clank your way to glory!
+  description: 'Fashion meets fortress! Perfect for knights who love a good clink
+    and don''t mind a squeak. Step in and clank your way to glory!
+
+    (animation
+    not implemented)'
   canOnlyContainOne: 1
   modifierStats:
   - statName: Defense
     statValue: 6
     effectTime: 0
+  type: 0
+  Equipement: {fileID: 0}

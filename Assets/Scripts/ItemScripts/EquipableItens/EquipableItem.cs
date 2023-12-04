@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EquipableItem : Item
 {
-    public Type type; 
+    public Type type;
+    public GameObject Equipement;
 
 }
 
