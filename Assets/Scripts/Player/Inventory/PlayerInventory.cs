@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -8,23 +9,41 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField]List<Item> PlayerItens = new List<Item>();
     private Item HeadGear;
     private Item BodyGear;
+    [SerializeField] TextMeshProUGUI GoldAmount;
+    [SerializeField] GameObject InventoryScreen;
 
+
+    private void Start()
+    {
+        UpdateGold();
+    }
+    public void OpenInventory()
+    {
+        InventoryScreen.SetActive(true);
+    }
 
     #region gold
     //just call it to add founds to the player, to remove use RemoveGold Method
     public void AddGold(int value)
     {
         gold += Mathf.Abs(value);
+        UpdateGold();
     }
 
     public void RemoveGold(int value)
     {
         gold -= Mathf.Abs(value);
+        UpdateGold();
     }
 
     public int GetGold()
     {
         return gold;
+    }
+
+    void UpdateGold()
+    {
+        GoldAmount.text = gold + " G";
     }
     #endregion
 

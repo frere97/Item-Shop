@@ -17,8 +17,12 @@ public class InventoryScreen : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        if(inventory == null)
+        {
+            inventory = LocalPlayer.instance.GetInventory();
+        }
         foreach(Item item in inventory.GetPlayerItems())
         {
             GameObject itemBtnObj = Instantiate(itemButton, ButtonsListHolder);
@@ -27,6 +31,15 @@ public class InventoryScreen : MonoBehaviour
             itemBtn.item = item;
             itemBtn.name = item.GetItemName();
             AllButtons.Add(itemBtn);
+        }
+    }
+
+    private void OnDisable()
+    {
+        while(AllButtons.Count > 0)
+        {
+            Destroy(AllButtons[0].gameObject);
+            AllButtons.Remove(AllButtons[0]);
         }
     }
 
